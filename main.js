@@ -14,7 +14,6 @@ const blaziken = {
   height: 1.9,
   generation: 3,
   canEvolve: false,
-  BST: 530,
   hP: 80,
   attack: 120,
   defense: 70,
