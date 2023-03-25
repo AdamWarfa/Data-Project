@@ -1,23 +1,23 @@
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: #f9f7f7;
-  color: #112d4e;
+  background-color: #ecf2ff;
+  color: #551d42;
 }
 header {
-  background-color: #3f72af;
+  background-color: #e5d1fa;
   text-align: center;
   padding: 3px 0;
   margin-bottom: 4vw;
-  color: #f9f7f7;
+  color: #551d42;
 }
 
 footer {
-  background-color: #3f72af;
+  background-color: #e5d1fa;
   text-align: center;
   padding: 3px 0;
 
-  color: #f9f7f7;
+  color: #551d42;
 }
 #pokemon-list {
   display: grid;
@@ -29,9 +29,10 @@ footer {
 .list-entry {
   width: 20vw;
   border: 30px;
-  border: 3px solid #112d4e;
-  background-color: #dbe2ef;
+  border: 3px solid #551d42;
+  background-color: #e3dffd;
   margin-bottom: 4vw;
+  cursor: pointer;
 }
 
 #list-name {
@@ -44,17 +45,27 @@ footer {
 }
 
 dialog {
-  background-color: #dbe2ef;
-  border: 3px solid #112d4e;
+  background-color: #e3dffd;
+  border: 3px solid #551d42;
   position: relative;
+  width: 40vw;
+  height: 70vh;
 }
 #pokemon-image {
+  width: 20vw;
+}
+
+#pokemon-footprint {
+  position: absolute;
+  width: 5vw;
+  right: 3vw;
+  top: 3vw;
 }
 
 .btn-close {
-  background-color: #3f71af;
+  background-color: #923272;
   border-radius: 28px;
-  border: 1px solid #112e4e;
+  border: 1px solid #551d42;
   display: inline-block;
   cursor: pointer;
   color: #f9f7f7;
@@ -62,12 +73,12 @@ dialog {
   font-size: 17px;
   padding: 16px 31px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #112e4e;
+  text-shadow: 0px 1px 0px #551d42;
   position: absolute;
   left: 45%;
 }
 .btn-close:hover {
-  background-color: #2f5682;
+  background-color: #551d42;
 }
 .btn-close:active {
   position: relative;

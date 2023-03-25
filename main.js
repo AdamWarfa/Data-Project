@@ -37,9 +37,10 @@ function addPokemon(pokemon) {
   function pokemonClicked() {
     console.log(pokemon);
     document.querySelector("#pokemon-name").textContent = pokemon.name;
-    document.querySelector("#pokemon-type").textContent = pokemon.type;
-    document.querySelector("#pokemon-dex").textContent = pokemon.dexIndex;
+    document.querySelector("#pokemon-type").textContent = `Type: ${pokemon.type}`;
+    document.querySelector("#pokemon-dex").textContent = `Dex Number: #0${pokemon.dexIndex}`;
     document.querySelector("#pokemon-image").src = pokemon.image;
+    document.querySelector("#pokemon-footprint").src = pokemon.footprint;
     document.querySelector("#pokemon-description").textContent = pokemon.description;
     document.querySelector("dialog").showModal();
     document.querySelector(".btn-close").addEventListener("click", pokemonClose);
