@@ -35,6 +35,12 @@ footer {
   cursor: pointer;
 }
 
+.list-entry:hover {
+  -webkit-box-shadow: 0px 0px 60px -17px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 60px -17px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 60px -17px rgba(0, 0, 0, 0.75);
+}
+
 #list-name {
   text-align: center;
   text-decoration: underline;
