@@ -8,15 +8,22 @@ header {
   background-color: #3f72af;
   text-align: center;
   padding: 3px 0;
-  margin-bottom: 40px;
+  margin-bottom: 4vw;
+  color: #f9f7f7;
+}
+
+footer {
+  background-color: #3f72af;
+  text-align: center;
+  padding: 3px 0;
+
   color: #f9f7f7;
 }
 #pokemon-list {
   display: grid;
-  grid-template-columns: 4;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: max-content;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: 10vw;
+  margin-left: 4vw;
 }
 
 .list-entry {
@@ -24,6 +31,7 @@ header {
   border: 30px;
   border: 3px solid #112d4e;
   background-color: #dbe2ef;
+  margin-bottom: 4vw;
 }
 
 #list-name {
@@ -38,6 +46,9 @@ header {
 dialog {
   background-color: #dbe2ef;
   border: 3px solid #112d4e;
+  position: relative;
+}
+#pokemon-image {
 }
 
 .btn-close {
@@ -52,6 +63,8 @@ dialog {
   padding: 16px 31px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #112e4e;
+  position: absolute;
+  left: 45%;
 }
 .btn-close:hover {
   background-color: #2f5682;
