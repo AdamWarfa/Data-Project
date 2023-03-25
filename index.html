@@ -4,11 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
     <title>Pokemon Data</title>
   </head>
   <body>
-    <h1>Pokémon Data</h1>
-    <ul id="pokemon"></ul>
+    <header><h1>Pokémon Data</h1></header>
+    <main>
+      <!-- <ul id="pokemon"></ul> -->
+      <dialog>
+        <h2 id="pokemon-name">name</h2>
+        <h3 id="pokemon-type">type</h3>
+        <p id="pokemon-dex">number</p>
+        <img id="pokemon-image" src="https://cederdorff.github.io/img/favicon.webp" />
+        <p id="pokemon-description">desc</p>
+        <a href="#" class="btn-close">CLOSE</a>
+      </dialog>
+      <section id="pokemon-list"></section>
+    </main>
+    <footer></footer>
     <script src="main.js"></script>
   </body>
 </html>

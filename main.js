@@ -1,32 +1,51 @@
-const blaziken = {
-  name: "blaziken",
-  dexNumber: 257,
-  type1: "fighting",
-  type2: "fire",
-  ability: "blaze ",
-  hiddenAbility: "speed boost",
-  description: "It learns martial arts that use punches and kicks. Every several years, its old feathers burn off, and new, supple feathers grow back in their place.",
-  image: "https://archives.bulbagarden.net/media/upload/thumb/c/c0/0257Blaziken.png/500px-0257Blaziken.png",
-  footprint: "https://www.serebii.net/pokedex-rs/footprints/257.gif",
-  weaknesses: "Water, Ground, Flying, Psychic",
-  gender: "87.5% male and 12.5% female",
-  weight: 52,
-  height: 1.9,
-  generation: 3,
-  canEvolve: false,
-  hP: 80,
-  attack: 120,
-  defense: 70,
-  spAttack: 110,
-  spDefense: 70,
-  speed: 80,
-};
+"use strict";
+
+window.addEventListener("load", initApp);
+
+async function initApp() {
+  const blaziken = await getPokemon("https://raw.githubusercontent.com/AdamWarfa/Data-Project/main/blaziken.json");
+  addPokemon(blaziken);
+  addPokemon(blaziken);
+  addPokemon(blaziken);
+  addPokemon(blaziken);
+  addPokemon(blaziken);
+  addPokemon(blaziken);
+  addPokemon(blaziken);
+  addPokemon(blaziken);
+}
+
+async function getPokemon(url) {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
 
 function addPokemon(pokemon) {
-  const basicInfo = document.createElement("li");
-  const stats = document.createElement("li");
-  basicInfo.textContent = `${pokemon.name} - ${pokemon.dexNumber} - ${pokemon.type1} - ${pokemon.type2}`;
-  stats.textContent = `BST: ${pokemon.BST} - HP: ${pokemon.hP} - Attack: ${pokemon.attack} - Defense: ${pokemon.defense}- Sp.Attack: ${pokemon.spAttack} - Sp.Defense: ${pokemon.spDefense} -Speed: ${pokemon.speed}`;
-  document.querySelector("#pokemon").appendChild(basicInfo);
-  document.querySelector("#pokemon").appendChild(stats);
+  document.querySelector("#pokemon-list").insertAdjacentHTML(
+    "beforeend",
+    /*html*/ `
+
+<article class="list-entry">
+    <h2 id="list-name">${pokemon.name}</h2>
+    <img id="list-image" src="${pokemon.image}"/>
+</article>
+`
+  );
+
+  document.querySelector("#pokemon-list article:last-child").addEventListener("click", pokemonClicked);
+
+  function pokemonClicked() {
+    console.log(pokemon);
+    document.querySelector("#pokemon-name").textContent = pokemon.name;
+    document.querySelector("#pokemon-type").textContent = pokemon.type;
+    document.querySelector("#pokemon-dex").textContent = pokemon.dexIndex;
+    document.querySelector("#pokemon-image").src = pokemon.image;
+    document.querySelector("#pokemon-description").textContent = pokemon.description;
+    document.querySelector("dialog").showModal();
+    document.querySelector(".btn-close").addEventListener("click", pokemonClose);
+  }
+}
+
+function pokemonClose() {
+  document.querySelector("dialog").close();
 }
