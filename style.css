@@ -16,7 +16,7 @@ header {
   grid-template-columns: 4;
   grid-template-rows: max-content;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: 4vw;
+  gap: 10vw;
 }
 
 .list-entry {
