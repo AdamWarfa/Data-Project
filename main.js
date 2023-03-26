@@ -29,7 +29,7 @@ function addPokemon(pokemon) {
 
     <img id="list-image" src = "${pokemon.image}"/>
     <h2 id="list-name">${pokemon.name}</h2>
-    <h3 id="list-number">${pokemon.dexIndex}</h3>
+    <h3 id="list-number">#0${pokemon.dexIndex}</h3>
     <p id="list-description">${pokemon.description}</p>
 </article>
 `
