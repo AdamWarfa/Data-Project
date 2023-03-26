@@ -26,8 +26,11 @@ function addPokemon(pokemon) {
     /*html*/ `
 
 <article class="list-entry">
+
+    <img id="list-image" src = "${pokemon.image}"/>
     <h2 id="list-name">${pokemon.name}</h2>
-    <img id="list-image" src="${pokemon.image}"/>
+    <h3 id="list-number">${pokemon.dexIndex}</h3>
+    <p id="list-description">${pokemon.description}</p>
 </article>
 `
   );

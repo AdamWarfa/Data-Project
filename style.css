@@ -30,19 +30,24 @@ footer {
   width: 20vw;
   border: 30px;
   border: 3px solid #551d42;
+  border-radius: 6%;
   background-color: #e3dffd;
   margin-bottom: 4vw;
+  padding: 1vw;
   cursor: pointer;
+  text-align: center;
+  transition: all 0.1s ease-in-out;
 }
 
 .list-entry:hover {
   -webkit-box-shadow: 0px 0px 60px -17px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 60px -17px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 60px -17px rgba(0, 0, 0, 0.75);
+
+  transform: scale(110%);
 }
 
 #list-name {
-  text-align: center;
   text-decoration: underline;
 }
 
