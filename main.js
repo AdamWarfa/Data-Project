@@ -38,7 +38,10 @@ function addPokemon(pokemon) {
   document.querySelector("#pokemon-list article:last-child").addEventListener("click", pokemonClicked);
 
   function pokemonClicked() {
-    console.log(pokemon);
+    document.querySelector("#background").classList.remove("dim");
+    document.querySelector("#background").classList.add("dark");
+    document.querySelector("#pokemon-list").classList.add("dark");
+
     document.querySelector("#pokemon-name").textContent = pokemon.name;
     document.querySelector("#pokemon-type").textContent = `Type: ${pokemon.type}`;
     document.querySelector("#pokemon-dex").textContent = `Dex Number: #0${pokemon.dexIndex}`;
@@ -52,4 +55,7 @@ function addPokemon(pokemon) {
 
 function pokemonClose() {
   document.querySelector("dialog").close();
+  document.querySelector("#background").classList.remove("dark");
+  document.querySelector("#pokemon-list").classList.remove("dark");
+  document.querySelector("#background").classList.add("dim");
 }
