@@ -25,8 +25,7 @@ function addPokemon(pokemon) {
     "beforeend",
     /*html*/ `
 
-<article class="list-entry">
-
+<article class="list-entry" class="data-tilt">
     <img id="list-image" src = "${pokemon.image}"/>
     <h2 id="list-name">${pokemon.name}</h2>
     <h3 id="list-number">#0${pokemon.dexIndex}</h3>

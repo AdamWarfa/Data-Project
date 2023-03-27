@@ -19,6 +19,7 @@ body {
 }
 .dark {
   filter: brightness(30%);
+  overflow-y: hidden;
 }
 
 header {
@@ -64,7 +65,7 @@ footer {
   -webkit-box-shadow: 0px 0px 60px -17px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 60px -17px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 60px -17px rgba(0, 0, 0, 0.75);
-
+  z-index: 5;
   transform: scale(110%);
 }
 
@@ -124,6 +125,9 @@ dialog {
 .btn-close:active {
   position: relative;
   top: 1px;
+}
+.btn-close:focus {
+  outline: 0;
 }
 
 @media only screen and (max-width: 1430px) {
