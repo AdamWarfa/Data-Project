@@ -14,10 +14,10 @@
   "generation": 3,
   "canEvolve": false,
   "spilversion": "Ruby, Sapphire, Emerald",
-  "hp": 5,
+  "statsHP": 5,
   "statsAttack": 8,
   "statsDefence": 5,
-  "statsSpAttack": 7,
+  "statsSpecialAttack": 7,
   "statsSpecialDefence": 5,
   "statsSpeed": 5
 }
