@@ -16,13 +16,23 @@
     <main>
       <!-- <ul id="pokemon"></ul> -->
       <dialog data-tilt>
-        <h2 id="pokemon-name">name</h2>
-        <h3 id="pokemon-type">type</h3>
-        <p id="pokemon-dex">number</p>
-        <img id="pokemon-footprint" src="https://blabla.jpg" alt="" />
-        <img id="pokemon-image" src="https://blabla.jpg" />
-        <p id="pokemon-description">desc</p>
-        <a href="#" class="btn-close">CLOSE</a>
+        <div id="dialog-content">
+          <h2 id="pokemon-name">name</h2>
+          <h3 id="pokemon-type">type</h3>
+          <h3 id="pokemon-dex">number</h3>
+          <img id="pokemon-footprint" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="" />
+          <img id="pokemon-image" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" />
+          <p id="pokemon-description">desc</p>
+          <div id="pokemon-stats">
+            <h3 class="pokemon-hp">HP</h3>
+            <h3 class="pokemon-attack">ATTACK</h3>
+            <h3 class="pokemon-defense">DEFENSE</h3>
+            <h3 class="pokemon-spattack">SP. ATTACK</h3>
+            <h3 class="pokemon-spdefense">SP. DEFENSE</h3>
+            <h3 class="pokemon-speed">SPEED</h3>
+          </div>
+          <a href="#" class="btn-close">CLOSE</a>
+        </div>
       </dialog>
       <section id="pokemon-list"></section>
     </main>

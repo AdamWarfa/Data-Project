@@ -40,6 +40,12 @@ function addPokemon(pokemon) {
     document.querySelector("#pokemon-image").src = pokemon.image;
     document.querySelector("#pokemon-footprint").src = pokemon.footprint;
     document.querySelector("#pokemon-description").textContent = pokemon.description;
+    document.querySelector(".pokemon-hp").textContent = `HEALTH: ${pokemon.statsHP}`;
+    document.querySelector(".pokemon-attack").textContent = `ATTACK: ${pokemon.statsAttack}`;
+    document.querySelector(".pokemon-defense").textContent = `DEFENSE: ${pokemon.statsDefence}`;
+    document.querySelector(".pokemon-spattack").textContent = `SP.ATTACK: ${pokemon.statsSpecialAttack}`;
+    document.querySelector(".pokemon-spdefense").textContent = `SP.DEFENSE: ${pokemon.statsSpecialDefence}`;
+    document.querySelector(".pokemon-speed").textContent = `SPEED: ${pokemon.statsSpeed}`;
     document.querySelector("dialog").showModal();
     document.querySelector(".btn-close").addEventListener("click", pokemonClose);
   }
