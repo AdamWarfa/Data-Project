@@ -499,7 +499,7 @@ var VanillaTilt = (function () {
     /**
      * Auto load
      */
-    VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+    VanillaTilt.init(document.querySelectorAll(".data-tilt"));
   }
 
   return VanillaTilt;

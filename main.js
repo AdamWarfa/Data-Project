@@ -13,6 +13,13 @@ async function getPokemon(url) {
   return data;
 }
 
+function removeTilt() {
+  if (document.body.clientWidth < 900) {
+    document.querySelector("dialog").classList.remove("data-tilt");
+    document.querySelector("dialog").removeAttribute("style");
+  }
+}
+
 function addPokemon(pokemon) {
   document.querySelector("#pokemon-list").insertAdjacentHTML(
     "beforeend",
@@ -30,6 +37,8 @@ function addPokemon(pokemon) {
   document.querySelector("#pokemon-list article:last-child").addEventListener("click", pokemonClicked);
 
   function pokemonClicked() {
+    const myTimeout = setTimeout(removeTilt, 100);
+
     document.querySelector("#background").classList.remove("dim");
     document.querySelector("#background").classList.add("dark");
     document.querySelector("#pokemon-list").classList.add("dark");
