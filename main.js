@@ -3,15 +3,8 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-  const blaziken = await getPokemon("https://raw.githubusercontent.com/AdamWarfa/Data-Project/main/blaziken.json");
-  addPokemon(blaziken);
-  addPokemon(blaziken);
-  addPokemon(blaziken);
-  addPokemon(blaziken);
-  addPokemon(blaziken);
-  addPokemon(blaziken);
-  addPokemon(blaziken);
-  addPokemon(blaziken);
+  const pokemons = await getPokemon("https://cederdorff.github.io/dat-js/05-data/pokemons.json");
+  pokemons.forEach(addPokemon);
 }
 
 async function getPokemon(url) {
