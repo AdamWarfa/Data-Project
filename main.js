@@ -11,7 +11,7 @@ async function initApp() {
     try {
       addPokemon(pokemon);
     } catch (error) {
-      console.log(`unable to work my magic on ${pokemon.name} ${error}`);
+      console.log(`unable to work my magic on ${pokemon.name} because ${error}`);
     }
   }
 }
@@ -40,7 +40,7 @@ function addPokemon(pokemon) {
     "beforeend",
     /*html*/ `
 
-<article class="list-entry" class="data-tilt">
+<article class="list-entry">
     <img id="list-image" src = "${pokemon.image}"/>
     <div class="type-color-${typeColor}"></div>
     <h2 id="list-name">${pokemon.name}</h2>
