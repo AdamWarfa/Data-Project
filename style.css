@@ -225,15 +225,16 @@ body {
 header {
   text-align: center;
   padding: 5px 0;
-
-  color: #fffee4;
+  text-shadow: 0px 3px 9px rgba(0, 0, 0, 1);
+  color: #fffee4d6;
   font-size: 28px;
 }
 
 footer {
   text-align: center;
   padding: 3px 0;
-  color: #fffee4;
+  color: #fffee4d6;
+  text-shadow: 0px 3px 9px rgba(0, 0, 0, 1);
 }
 
 #pokemon-list {
@@ -408,9 +409,6 @@ dialog {
     position: relative;
     width: 45vw;
     height: 45vw;
-  }
-
-  #dialog-content {
   }
 }
 
