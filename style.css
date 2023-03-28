@@ -272,15 +272,17 @@ footer {
 
 #list-name {
   text-decoration: underline;
+  margin-top: 0;
 }
 
 #list-image {
   width: 70%;
+  margin-left: 2vw;
 }
 
 #list-description {
   font-size: 1vw;
-  margin-top: 3vw;
+  margin-top: 2vw;
 }
 
 dialog {

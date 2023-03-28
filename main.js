@@ -3,12 +3,15 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-  const pokemons = await getPokemon("https://cederdorff.github.io/dat-js/05-data/pokemons.json");
+  const pokemons = await getPokemon("https://raw.githubusercontent.com/AdamWarfa/Data-Project/main/test.json");
+  pokemons.sort(function (a, b) {
+    return a.dexindex - b.dexindex;
+  });
   for (const pokemon of pokemons) {
     try {
       addPokemon(pokemon);
     } catch (error) {
-      console.log(`unable to parse ${pokemon.name}`);
+      console.log(`unable to work my magic on ${pokemon.name}`);
     }
   }
 }
@@ -19,15 +22,18 @@ async function getPokemon(url) {
   return data;
 }
 
-function removeTilt() {
-  if (document.body.clientWidth < 900) {
-    document.querySelector("dialog").classList.remove("data-tilt");
-    document.querySelector("dialog").removeAttribute("style");
-  }
-}
-
 function addPokemon(pokemon) {
   let typeColor = pokemon.type.split(",")[0].trim().toLowerCase();
+
+  // const dexString = pokemon.dexindex.toString();
+  // let dexLength = pokemon.dexindex.toString().length;
+  // if (dexLength === 1) {
+  //   let dexNumber = "000" + dexString;
+  // } else if (dexLength === 2) {
+  //   let dexNumber = "00" + dexString;
+  // } else if (dexLength === 3) {
+  //   let dexNumber = "0" + dexString;
+  // }
 
   document.querySelector("#pokemon-list").insertAdjacentHTML(
     "beforeend",
@@ -37,7 +43,7 @@ function addPokemon(pokemon) {
     <img id="list-image" src = "${pokemon.image}"/>
     <div class="type-color-${typeColor}"></div>
     <h2 id="list-name">${pokemon.name}</h2>
-    <h3 id="list-number">#0${pokemon.dexindex}</h3>
+    <h3 id="list-number">#${pokemon.dexindex}</h3>
     <p id="list-description">${pokemon.description}</p>
 </article>
 `
@@ -46,15 +52,13 @@ function addPokemon(pokemon) {
   document.querySelector("#pokemon-list article:last-child").addEventListener("click", pokemonClicked);
 
   function pokemonClicked() {
-    const myTimeout = setTimeout(removeTilt, 100);
-
     document.querySelector("#background").classList.remove("dim");
     document.querySelector("#background").classList.add("dark");
     document.querySelector("#pokemon-list").classList.add("dark");
 
     document.querySelector("#pokemon-name").textContent = pokemon.name;
     document.querySelector("#pokemon-type").textContent = `Type: ${pokemon.type}`;
-    document.querySelector("#pokemon-dex").textContent = `Dex Number: #0${pokemon.dexindex}`;
+    document.querySelector("#pokemon-dex").textContent = `Dex Number: ${pokemon.dexindex}`;
     document.querySelector("#pokemon-image").src = pokemon.image;
     document.querySelector("#pokemon-footprint").src = pokemon.footprint;
     document.querySelector("#pokemon-description").textContent = pokemon.description;
