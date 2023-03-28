@@ -4,7 +4,10 @@ window.addEventListener("load", initApp);
 
 async function initApp() {
   const pokemons = await getPokemon("https://cederdorff.github.io/dat-js/05-data/pokemons.json");
-  pokemons.forEach(addPokemon);
+  for (const pokemon of pokemons) {
+    addPokemon(pokemon);
+    pokemon.type;
+  }
 }
 
 async function getPokemon(url) {
@@ -21,14 +24,19 @@ function removeTilt() {
 }
 
 function addPokemon(pokemon) {
+  let typeComma = pokemon.type.indexOf(",");
+  let typeLine = pokemon.type.substring(0, typeComma);
+  const typeClass = typeLine.toLowerCase();
+
   document.querySelector("#pokemon-list").insertAdjacentHTML(
     "beforeend",
     /*html*/ `
 
 <article class="list-entry" class="data-tilt">
     <img id="list-image" src = "${pokemon.image}"/>
+    <div class="type-color-${pokemon.type}"></div>
     <h2 id="list-name">${pokemon.name}</h2>
-    <h3 id="list-number">#0${pokemon.dexIndex}</h3>
+    <h3 id="list-number">#0${pokemon.dexindex}</h3>
     <p id="list-description">${pokemon.description}</p>
 </article>
 `
@@ -45,11 +53,11 @@ function addPokemon(pokemon) {
 
     document.querySelector("#pokemon-name").textContent = pokemon.name;
     document.querySelector("#pokemon-type").textContent = `Type: ${pokemon.type}`;
-    document.querySelector("#pokemon-dex").textContent = `Dex Number: #0${pokemon.dexIndex}`;
+    document.querySelector("#pokemon-dex").textContent = `Dex Number: #0${pokemon.dexindex}`;
     document.querySelector("#pokemon-image").src = pokemon.image;
     document.querySelector("#pokemon-footprint").src = pokemon.footprint;
     document.querySelector("#pokemon-description").textContent = pokemon.description;
-    document.querySelector(".pokemon-hp").textContent = `HEALTH: ${pokemon.statsHP}`;
+    document.querySelector(".pokemon-hp").textContent = `HP: ${pokemon.statsHP}`;
     document.querySelector(".pokemon-attack").textContent = `ATTACK: ${pokemon.statsAttack}`;
     document.querySelector(".pokemon-defense").textContent = `DEFENSE: ${pokemon.statsDefence}`;
     document.querySelector(".pokemon-spattack").textContent = `SP.ATTACK: ${pokemon.statsSpecialAttack}`;
