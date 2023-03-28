@@ -47,7 +47,7 @@ body {
   border-top-right-radius: 5%;
   height: 100%;
   transform: skew(-20deg);
-  background-color: rgba(255, 0, 0, 0.365);
+  background-color: rgba(184, 0, 46, 0.365);
   top: 0;
   left: 31%;
   overflow: hidden;
@@ -159,7 +159,7 @@ body {
   border-top-right-radius: 5%;
   height: 100%;
   transform: skew(-20deg);
-  background-color: rgba(0, 123, 255, 0.365);
+  background-color: rgba(0, 0, 0, 0.365);
   top: 0;
   left: 31%;
   overflow: hidden;
@@ -187,7 +187,35 @@ body {
   border-top-right-radius: 5%;
   height: 100%;
   transform: skew(-20deg);
-  background-color: rgba(53, 119, 163, 0.365);
+  background-color: rgba(95, 255, 191, 0.365);
+  top: 0;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.type-color-ghost {
+  position: absolute;
+  width: 38%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 100%;
+  transform: skew(-20deg);
+  background-color: rgba(114, 49, 255, 0.365);
+  top: 0;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.type-color-bug {
+  position: absolute;
+  width: 38%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 100%;
+  transform: skew(-20deg);
+  background-color: rgba(36, 120, 0, 0.365);
   top: 0;
   left: 31%;
   overflow: hidden;

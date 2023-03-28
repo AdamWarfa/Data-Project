@@ -5,8 +5,11 @@ window.addEventListener("load", initApp);
 async function initApp() {
   const pokemons = await getPokemon("https://cederdorff.github.io/dat-js/05-data/pokemons.json");
   for (const pokemon of pokemons) {
-    addPokemon(pokemon);
-    pokemon.type;
+    try {
+      addPokemon(pokemon);
+    } catch (error) {
+      console.log(`unable to parse ${pokemon.name}`);
+    }
   }
 }
 
@@ -24,9 +27,7 @@ function removeTilt() {
 }
 
 function addPokemon(pokemon) {
-  let typeComma = pokemon.type.indexOf(",");
-  let typeLine = pokemon.type.substring(0, typeComma);
-  const typeClass = typeLine.toLowerCase();
+  let typeColor = pokemon.type.split(",")[0].trim().toLowerCase();
 
   document.querySelector("#pokemon-list").insertAdjacentHTML(
     "beforeend",
@@ -34,7 +35,7 @@ function addPokemon(pokemon) {
 
 <article class="list-entry" class="data-tilt">
     <img id="list-image" src = "${pokemon.image}"/>
-    <div class="type-color-${pokemon.type}"></div>
+    <div class="type-color-${typeColor}"></div>
     <h2 id="list-name">${pokemon.name}</h2>
     <h3 id="list-number">#0${pokemon.dexindex}</h3>
     <p id="list-description">${pokemon.description}</p>
