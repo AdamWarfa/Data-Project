@@ -3,7 +3,7 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-  const pokemons = await getPokemon("https://raw.githubusercontent.com/AdamWarfa/Data-Project/main/test.json");
+  const pokemons = await getPokemon("https://cederdorff.github.io/dat-js/05-data/pokemons.json");
   pokemons.sort(function (a, b) {
     return a.dexindex - b.dexindex;
   });
