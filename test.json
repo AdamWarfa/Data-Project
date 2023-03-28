@@ -94,7 +94,7 @@
   },
   {
     "name": "Mew",
-    "image": "https://archives.bulbagarden.net/media/upload/9/9a/0151Mew.png",
+    "image": "https://archives.bulbagarden.net/media/upload/thumb/9/9a/0151Mew.png/1200px-0151Mew.png",
     "ability": "Synchronize",
     "description": "Placeholder",
     "footprint": "https://archives.bulbagarden.net/media/upload/a/ad/F0151.png",
@@ -163,7 +163,7 @@
   },
   {
     "name": "Clefable",
-    "description": "Clefable is a tall, pink Pokémon with a vaguely star-shaped body. It has long, pointed ears with dark brown tips and black, oval eyes with wrinkles on either side. A curled lock of fur hangs over its forehead, much like its long, tightly curled tail. On its back is a pair of dark pink wings; each wing has three points. Its hands have three fingers each, and its feet have two clawed toes and dark pink soles.",
+    "description": "Clefable is a tall, pink Pokémon with a vaguely star-shaped body. It has long, pointed ears with dark brown tips and black, oval eyes with wrinkles on either side. A curled lock of fur hangs over its forehead, much like its long, tightly curled tail.",
     "ability": "Cute Charm, Magic Guard and Unaware",
     "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/036.png",
     "footprint": "https://archives.bulbagarden.net/media/upload/d/d8/F0036.png",
@@ -576,7 +576,7 @@
     "name": "Mudkip",
     "description": " The fin on Mudkip’s head acts as highly sensitive radar.Using this fin to sense movements of water and air, this Pokémon can determine what is taking place around it without using its eyes.",
     "ability": "Torrent",
-    "image": "https://archives.bulbagarden.net/media/upload/archive/2/26/20091223220130%210258Mudkip.png",
+    "image": "https://archives.bulbagarden.net/media/upload/2/26/0258Mudkip.png",
     "footprint": "https://archives.bulbagarden.net/media/upload/1/1e/F0258.png",
     "dexindex": 258,
     "type": "Water",
