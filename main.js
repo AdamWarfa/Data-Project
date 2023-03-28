@@ -11,7 +11,7 @@ async function initApp() {
     try {
       addPokemon(pokemon);
     } catch (error) {
-      console.log(`unable to work my magic on ${pokemon.name}`);
+      console.log(`unable to work my magic on ${pokemon.name} ${error}`);
     }
   }
 }
@@ -25,15 +25,16 @@ async function getPokemon(url) {
 function addPokemon(pokemon) {
   let typeColor = pokemon.type.split(",")[0].trim().toLowerCase();
 
-  // const dexString = pokemon.dexindex.toString();
-  // let dexLength = pokemon.dexindex.toString().length;
-  // if (dexLength === 1) {
-  //   let dexNumber = "000" + dexString;
-  // } else if (dexLength === 2) {
-  //   let dexNumber = "00" + dexString;
-  // } else if (dexLength === 3) {
-  //   let dexNumber = "0" + dexString;
-  // }
+  const dexString = pokemon.dexindex.toString();
+  let dexLength = pokemon.dexindex.toString().length;
+  let dexNumber = 0;
+  if (dexLength === 1) {
+    dexNumber = "000" + dexString;
+  } else if (dexLength === 2) {
+    dexNumber = "00" + dexString;
+  } else if (dexLength === 3) {
+    dexNumber = "0" + dexString;
+  }
 
   document.querySelector("#pokemon-list").insertAdjacentHTML(
     "beforeend",
@@ -43,7 +44,7 @@ function addPokemon(pokemon) {
     <img id="list-image" src = "${pokemon.image}"/>
     <div class="type-color-${typeColor}"></div>
     <h2 id="list-name">${pokemon.name}</h2>
-    <h3 id="list-number">#${pokemon.dexindex}</h3>
+    <h3 id="list-number">#${dexNumber}</h3>
     <p id="list-description">${pokemon.description}</p>
 </article>
 `
