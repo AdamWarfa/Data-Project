@@ -1,8 +1,8 @@
 {
   "name": "Blaziken",
-  "dexIndex": 257,
+  "dexindex": 257,
   "type": "fighting, fire",
-  "subType": "Blaze Pokemon",
+  "subtype": "Blaze Pokemon",
   "ability": "Blaze, Speed Boost",
   "description": "It learns martial arts that use punches and kicks. Every several years, its old feathers burn off, and new, supple feathers grow back in their place.",
   "image": "https://archives.bulbagarden.net/media/upload/thumb/c/c0/0257Blaziken.png/500px-0257Blaziken.png",
