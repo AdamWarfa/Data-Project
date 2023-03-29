@@ -47,7 +47,7 @@ body {
   border-top-right-radius: 5%;
   height: 100%;
   transform: skew(-20deg);
-  background-color: rgba(184, 0, 46, 0.365);
+  background-color: rgba(237, 0, 59, 0.365);
   top: 0;
   left: 31%;
   overflow: hidden;
@@ -145,7 +145,7 @@ body {
   border-top-right-radius: 5%;
   height: 100%;
   transform: skew(-20deg);
-  background-color: rgba(255, 98, 0, 0.365);
+  background-color: rgba(173, 95, 0, 0.365);
   top: 0;
   left: 31%;
   overflow: hidden;
@@ -173,7 +173,7 @@ body {
   border-top-right-radius: 5%;
   height: 100%;
   transform: skew(-20deg);
-  background-color: rgba(228, 136, 83, 0.365);
+  background-color: rgba(255, 115, 50, 0.365);
   top: 0;
   left: 31%;
   overflow: hidden;
@@ -217,6 +217,201 @@ body {
   transform: skew(-20deg);
   background-color: rgba(36, 120, 0, 0.365);
   top: 0;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-grass {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(0, 255, 8, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-fire {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(237, 0, 59, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+.dialog-type-water {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(0, 123, 255, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-electric {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(251, 255, 0, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-normal {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(255, 255, 255, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-psychic {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(255, 0, 170, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-fairy {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(255, 129, 215, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-flying {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(81, 211, 255, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-ground {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(173, 95, 0, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-dark {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(0, 0, 0, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-fighting {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(255, 115, 50, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-dragon {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(95, 255, 191, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-ghost {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(114, 49, 255, 0.365);
+  top: -3%;
+  left: 31%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.dialog-type-bug {
+  position: absolute;
+  width: 60%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  height: 130%;
+  transform: skew(-20deg);
+  background-color: rgba(36, 120, 0, 0.365);
+  top: -3%;
   left: 31%;
   overflow: hidden;
   z-index: -1;

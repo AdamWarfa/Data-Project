@@ -34,6 +34,16 @@ function addPokemon(pokemon) {
     dexNumber = "00" + dexString;
   } else if (dexLength === 3) {
     dexNumber = "0" + dexString;
+  } else if (dexLength === 4) {
+    dexNumber = dexString;
+  }
+
+  let pokemonPeriod3 = pokemon.description.indexOf(".", 200);
+  let pokemonDesc = pokemon.description;
+  if (pokemonDesc.length > 300) {
+    pokemonDesc = pokemon.description.substring(0, pokemonPeriod3 + 1);
+    console.log(pokemonPeriod3);
+    console.log(pokemonDesc);
   }
 
   document.querySelector("#pokemon-list").insertAdjacentHTML(
@@ -45,7 +55,7 @@ function addPokemon(pokemon) {
     <div class="type-color-${typeColor}"></div>
     <h2 id="list-name">${pokemon.name}</h2>
     <h3 id="list-number">#${dexNumber}</h3>
-    <p id="list-description">${pokemon.description}</p>
+    <p id="list-description">${pokemonDesc}</p>
 </article>
 `
   );
@@ -56,6 +66,7 @@ function addPokemon(pokemon) {
     document.querySelector("#background").classList.remove("dim");
     document.querySelector("#background").classList.add("dark");
     document.querySelector("#pokemon-list").classList.add("dark");
+    document.querySelector("#dialog-color").classList.add(`dialog-type-${typeColor}`);
 
     document.querySelector("#pokemon-name").textContent = pokemon.name;
     document.querySelector("#pokemon-type").textContent = `Type: ${pokemon.type}`;
@@ -78,5 +89,6 @@ function pokemonClose() {
   document.querySelector("dialog").close();
   document.querySelector("#background").classList.remove("dark");
   document.querySelector("#pokemon-list").classList.remove("dark");
+  document.querySelector("#dialog-color").removeAttribute("class");
   document.querySelector("#background").classList.add("dim");
 }
