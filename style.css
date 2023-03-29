@@ -500,6 +500,7 @@ dialog {
   position: relative;
   width: 40vw;
   height: 40vw;
+  overflow: hidden;
 }
 #dialog-content {
   position: absolute;
