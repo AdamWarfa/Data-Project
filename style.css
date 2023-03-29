@@ -33,7 +33,7 @@ body {
   border-top-right-radius: 5%;
   height: 100%;
   transform: skew(-20deg);
-  background-color: rgba(0, 255, 8, 0.365);
+  background-color: rgba(0, 198, 7, 0.365);
   top: 0;
   left: 31%;
   overflow: hidden;
@@ -215,7 +215,7 @@ body {
   border-top-right-radius: 5%;
   height: 100%;
   transform: skew(-20deg);
-  background-color: rgba(36, 120, 0, 0.365);
+  background-color: rgba(169, 254, 79, 0.365);
   top: 0;
   left: 31%;
   overflow: hidden;
@@ -229,7 +229,7 @@ body {
   border-top-right-radius: 5%;
   height: 130%;
   transform: skew(-20deg);
-  background-color: rgba(0, 255, 8, 0.365);
+  background-color: rgba(0, 198, 7, 0.365);
   top: -3%;
   left: 31%;
   overflow: hidden;
@@ -410,7 +410,7 @@ body {
   border-top-right-radius: 5%;
   height: 130%;
   transform: skew(-20deg);
-  background-color: rgba(36, 120, 0, 0.365);
+  background-color: rgba(137, 236, 30, 0.365);
   top: -3%;
   left: 31%;
   overflow: hidden;

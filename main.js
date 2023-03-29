@@ -25,6 +25,11 @@ async function getPokemon(url) {
 function addPokemon(pokemon) {
   let typeColor = pokemon.type.split(",")[0].trim().toLowerCase();
 
+  if (pokemon.type.includes("/")) {
+    typeColor = pokemon.type.split("/")[0].trim().toLowerCase();
+    console.log(typeColor);
+  }
+
   const dexString = pokemon.dexindex.toString();
   let dexLength = pokemon.dexindex.toString().length;
   let dexNumber = 0;
@@ -70,7 +75,7 @@ function addPokemon(pokemon) {
 
     document.querySelector("#pokemon-name").textContent = pokemon.name;
     document.querySelector("#pokemon-type").textContent = `Type: ${pokemon.type}`;
-    document.querySelector("#pokemon-dex").textContent = `Dex Number: ${pokemon.dexindex}`;
+    document.querySelector("#pokemon-dex").textContent = `Dex Number: ${dexNumber}`;
     document.querySelector("#pokemon-image").src = pokemon.image;
     document.querySelector("#pokemon-footprint").src = pokemon.footprint;
     document.querySelector("#pokemon-description").textContent = pokemon.description;
