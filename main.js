@@ -4,16 +4,53 @@ window.addEventListener("load", initApp);
 
 async function initApp() {
   const pokemons = await getPokemon("https://cederdorff.github.io/dat-js/05-data/pokemons.json");
-  pokemons.sort(function (a, b) {
-    return a.dexindex - b.dexindex;
-  });
-  for (const pokemon of pokemons) {
-    try {
-      addPokemon(pokemon);
-    } catch (error) {
-      console.log(`unable to work my magic on ${pokemon.name} because ${error}`);
+  document.querySelector("#sorting-options").addEventListener("change", selectSort);
+  pokemons.sort(numberSort);
+  loopPokemon();
+  function loopPokemon() {
+    for (const pokemon of pokemons) {
+      try {
+        addPokemon(pokemon);
+      } catch (error) {
+        console.log(`unable to work my magic on ${pokemon.name} because ${error}`);
+      }
     }
   }
+
+  function selectSort() {
+    const newSort = this.value;
+    changeSort(newSort);
+  }
+  function changeSort(sort) {
+    if (sort === "dex-number") {
+      removePokemon();
+      pokemons.sort(numberSort);
+      console.log("sorted by number");
+      loopPokemon();
+    } else if (sort === "name") {
+      removePokemon();
+      pokemons.sort(nameSort);
+      console.log("sorted by name");
+      loopPokemon();
+    } else if (sort === "type") {
+      removePokemon();
+      pokemons.sort(typeSort);
+      console.log("sorted by type");
+      loopPokemon();
+    }
+  }
+}
+
+function numberSort(a, b) {
+  return a.dexindex - b.dexindex;
+}
+
+function nameSort(a, b) {
+  return a.name.localeCompare(b.name);
+}
+
+function typeSort(a, b) {
+  return a.type.localeCompare(b.type);
 }
 
 async function getPokemon(url) {
@@ -96,4 +133,8 @@ function pokemonClose() {
   document.querySelector("#pokemon-list").classList.remove("dark");
   document.querySelector("#dialog-color").removeAttribute("class");
   document.querySelector("#background").classList.add("dim");
+}
+
+function removePokemon() {
+  document.querySelectorAll(".list-entry").forEach((e) => e.remove());
 }
