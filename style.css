@@ -22,10 +22,6 @@ body {
   overflow-y: hidden;
 }
 
-.hidetilt {
-  transform: inherit !important;
-}
-
 .type-color-grass {
   position: absolute;
   width: 38%;
