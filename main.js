@@ -6,16 +6,7 @@ async function initApp() {
   const pokemons = await getPokemon("https://cederdorff.github.io/dat-js/05-data/pokemons.json");
   document.querySelector("#sorting-options").addEventListener("change", selectSort);
   pokemons.sort(numberSort);
-  loopPokemon();
-  function loopPokemon() {
-    for (const pokemon of pokemons) {
-      try {
-        addPokemon(pokemon);
-      } catch (error) {
-        console.log(`unable to work my magic on ${pokemon.name} because ${error}`);
-      }
-    }
-  }
+  loopPokemon(pokemons);
 
   function selectSort() {
     const newSort = this.value;
@@ -26,17 +17,26 @@ async function initApp() {
       removePokemon();
       pokemons.sort(numberSort);
       console.log("sorted by number");
-      loopPokemon();
+      loopPokemon(pokemons);
     } else if (sort === "name") {
       removePokemon();
       pokemons.sort(nameSort);
       console.log("sorted by name");
-      loopPokemon();
+      loopPokemon(pokemons);
     } else if (sort === "type") {
       removePokemon();
       pokemons.sort(typeSort);
       console.log("sorted by type");
-      loopPokemon();
+      loopPokemon(pokemons);
+    }
+  }
+}
+function loopPokemon(pokemons) {
+  for (const pokemon of pokemons) {
+    try {
+      addPokemon(pokemon);
+    } catch (error) {
+      console.log(`unable to work my magic on ${pokemon.name} because ${error}`);
     }
   }
 }
